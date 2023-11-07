@@ -1,5 +1,8 @@
 import math
 
+# masukan vector dapat bertipe list atau semacamnya 
+# menggunakan library math
+
 def dot(vector1, vector2):
 
 	result = []	
@@ -9,16 +12,16 @@ def dot(vector1, vector2):
 
 	return sum(result)
 
-def vector_length(vector):
-	
+def length(vector):
+
 	dot_product = dot(vector, vector)
-	result = math.sqrt(dot_product)
+	result = round(math.sqrt(dot_product), 3)
 
 	return result
 
 # angle
 def angle(vector1, vector2):
 
-	formula = math.acos(dot(vector1, vector2) / (vector_length(vector1)*vector_length(vector2)))
+	formula = math.acos(dot(vector1, vector2) / (length(vector1) * length(vector2)))
 
-	return "{} derajat".format(int(math.degrees(formula)))
+	return "{} derajat".format(round(math.degrees(formula), 3))
