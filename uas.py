@@ -1,6 +1,10 @@
 import tkinter as tk
 import vector_calc as vc
 
+# List Anggota
+anggota = {'Afrizal Luthfi Eka Arnatha' : 183, 'Sarah Nabila' : 195, 'Rizky Akbar Maulana' : 196, 'Diha Anfeu Nio Julaynda' : 212}
+
+
 root = tk.Tk()
 root.geometry("650x400")
 root.title('dot, length and angle calculator')
@@ -127,10 +131,15 @@ main_frame.pack(side=tk.LEFT)
 main_frame.pack_propagate(False)
 main_frame.configure(height=400, width=600)
 
-welcome = tk.Frame(main_frame, bg="#ffffff")
-welcome.pack()
+welcome_label = tk.Label(main_frame, text="Kelompok n", font=('Bold', 16), bg='#ffffff')
+welcome_label.pack(pady=(50, 0))
 
+count = 0
 
+for key, value in anggota.items():
+	member_label = tk.Label(main_frame, text='{} {}'.format(key, value), font=11, bg='#ffffff', anchor='w')
+	member_label.place(x = 40, y = 120+count)
+	count += 30
 
 
 root.mainloop()
