@@ -15,7 +15,7 @@ def dot(vector1, vector2):
 def length(vector):
 
 	dot_product = dot(vector, vector)
-	result = round(math.sqrt(dot_product), 3)
+	result = math.sqrt(dot_product)
 
 	return result
 
@@ -24,4 +24,4 @@ def angle(vector1, vector2):
 
 	formula = math.acos(dot(vector1, vector2) / (length(vector1) * length(vector2)))
 
-	return "{} derajat".format(round(math.degrees(formula), 3))
+	return round(math.degrees(formula), 3)
