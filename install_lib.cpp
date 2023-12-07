@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main(){
+	system("python.exe -m pip install --upgrade pip");
 	system("pip install Pillow");
 	system("pip install matplotlib");
 	system("pip install pdf2image");
